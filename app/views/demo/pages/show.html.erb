@@ -1,0 +1,11 @@
+<div class="min-h-screen bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h1 class="text-5xl font-bold text-gray-900 mb-8 text-center lg:text-left">
+      <%= current_page.title %>
+    </h1>
+    
+    <div class="prose prose-lg max-w-none bg-white rounded-xl shadow-sm p-8">
+      <%= content.html(:body) %>
+    </div>
+  </div>
+</div>
