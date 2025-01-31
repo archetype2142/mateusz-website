@@ -3,12 +3,12 @@ Spina.configure do |config|
   # ===============
   # All locales your content should be available in.
   # Defaults to I18n.default_locale
-  # config.locales = [:en, :nl]
+  config.locales = [:en, :pl]
 
   # Backend title
   # ===============
   # Set <title> for the admin panel. Defaults to "Spina CMS"
-  # config.backend_title = "Spina CMS"
+  config.backend_title = "Mateusz"
 
   # Backend path
   # ===============
@@ -73,7 +73,7 @@ Spina.configure do |config|
   # Confetti
   # ===============
   # For people who don't appreciate confetti, you can disable that here.
-  # config.party_pooper = true
+  config.party_pooper = true
 
   # Pages Options
   # ===============
