@@ -41,3 +41,6 @@
 /app/assets/config/spina/tailwind.config.js
 .DS_Store
 app/.DS_Store
+/node_modules
+.env
+dump.rdb
