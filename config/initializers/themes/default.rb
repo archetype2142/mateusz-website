@@ -6,7 +6,7 @@
 Spina::Theme.register do |theme|
   # All views are namespaced based on the theme's name
   theme.name = "default"
-  theme.title = "Default theme"
+  theme.title = "Demo theme"
 
   # Parts
   # Define all editable parts you want to use in your view templates
@@ -21,7 +21,14 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
-    { name: "text", title: "Body", hint: "Your main content", part_type: "Spina::Parts::Text" }
+    { name: "repeater", title: "Repeater", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[date_place headline line image] },
+    { name: "line", title: "Line", part_type: "Spina::Parts::Line" },
+    { name: "body", title: "Body", hint: "Your content", part_type: "Spina::Parts::Text" },
+    { name: "image_collection", title: "Image collection", part_type: "Spina::Parts::ImageCollection" },
+    { name: "image", title: "Image", part_type: "Spina::Parts::Image" },
+    { name: "headline", title: "Headline", hint: "Used in the header", part_type: "Spina::Parts::Line" },
+    { name: "footer", title: "Footer", part_type: "Spina::Parts::Text" },
+    { name: "date_place", title: "Date and place", part_type: "Spina::Parts::Line" }
   ]
 
   # View templates
@@ -29,15 +36,17 @@ Spina::Theme.register do |theme|
   # You define which parts you want to enable for every view template
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
-    { name: "homepage", title: "Homepage", parts: %w[text] },
-    { name: "show", title: "Page", parts: %w[text] }
+    { name: "homepage", title: "Homepage", parts: %w[headline body image_collection] },
+    { name: "show", title: "Default", parts: %w[body image repeater] },
+    { name: "demo", title: "Demo", parts: %w[body image_collection image repeater], exclude_from: %w[articles] }
   ]
 
   # Custom pages
   # Some pages should not be created by the user, but generated automatically.
   # By naming them you can reference them in your code.
   theme.custom_pages = [
-    { name: "homepage", title: "Homepage", deletable: false, view_template: "homepage" }
+    { name: "homepage", title: "Homepage", deletable: false, view_template: "homepage" },
+    { name: "demo", title: "Demo", deletable: true, view_template: "demo" }
   ]
 
   # Navigations (optional)
@@ -55,10 +64,12 @@ Spina::Theme.register do |theme|
   # Resources (optional)
   # Think of resources as a collection of pages. They are managed separately in Spina
   # allowing you to separate these pages from the 'main' collection of pages.
-  theme.resources = []
+  theme.resources = [
+    { name: "articles", label: "Articles", view_template: "article", slug: "articles" }
+  ]
 
   # Plugins (optional)
-  theme.plugins = []
+  theme.plugins = [ "reviews" ]
 
   # Embeds (optional)
   theme.embeds = []
