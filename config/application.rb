@@ -32,5 +32,7 @@ module Mateusz
         load override
       end
     end
+
+    config.hosts << "85.90.244.28"
   end
 end
