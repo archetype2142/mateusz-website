@@ -1,0 +1,105 @@
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+/* Tech Stack Section */
+.tech-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-container:hover {
+  transform: translateY(-5px);
+}
+
+.tech-label {
+  font-size: 0.875rem;
+  color: #4B5563;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.tech-icon-container:hover .tech-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stats Section */
+.stat-container {
+  position: relative;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(45deg, var(--tw-primary), var(--tw-primary-light));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.stat-container:hover {
+  transform: translateY(-5px);
+}
+
+.stat-container:hover::before {
+  opacity: 0.1;
+}
+
+/* Expertise Cards */
+.expertise-card {
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 20s linear infinite;
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+/* Fade In Animation */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

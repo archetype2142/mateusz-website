@@ -1,123 +1,338 @@
-<!-- Hero Section -->
-<div class="bg-gradient-to-r from-blue-600 to-indigo-700">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-    <div class="text-center">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-        Konsulting i szkolenia AI
-      </h1>
-      <p class="mt-6 text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-        Wykorzystaj potencjał drzemiący w Twoich danych przy użyciu zaawansowanej analizy danych oraz sztucznej inteligencji
-      </p>
-      <div class="mt-10 flex justify-center gap-4">
-        <a href="#services" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-blue-50 transition-colors">
-          Oferta →
-        </a>
-        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors">
-          Kontakt →
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Services Section -->
-<div id="services" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Usługi</h2>
-      <p class="mt-4 text-xl text-gray-600">Kompleksowe wsparcie w zakresie AI i Data Science</p>
-    </div>
-
-    <div class="mt-16 grid gap-8 md:grid-cols-3">
-      <!-- Service 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-        <div class="px-6 py-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Szkolenia i Warsztaty AI</h3>
-          <p class="text-gray-600 mb-6">Praktyczne szkolenia z zakresu sztucznej inteligencji i uczenia maszynowego.</p>
-          <a href="/szkolenie-warsztaty-ai" class="text-blue-600 hover:text-blue-800 font-medium">
-            Szczegóły →
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-        <div class="px-6 py-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Projekty Data Science</h3>
-          <p class="text-gray-600 mb-6">Kompleksowa realizacja projektów z zakresu analizy danych i machine learning.</p>
-          <a href="/projekt-data-science" class="text-blue-600 hover:text-blue-800 font-medium">
-            Szczegóły →
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-        <div class="px-6 py-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Konsultacje</h3>
-          <p class="text-gray-600 mb-6">Indywidualne konsultacje i doradztwo w zakresie AI i analizy danych.</p>
-          <a href="/konsultacje" class="text-blue-600 hover:text-blue-800 font-medium">
-            Szczegóły →
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Testimonials Section -->
-<div class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-16">Referencje</h2>
+<div class="min-h-screen" data-controller="homepage">
+  <!-- Hero Section -->
+  <div class="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
     </div>
     
-    <div class="grid gap-8 lg:grid-cols-3">
-      <!-- Testimonial 1 -->
-      <div class="bg-white rounded-xl shadow-md p-8">
-        <p class="text-gray-600 mb-4">Pan Mateusz wykazał się nie tylko pełnym profesjonalizmem, ale również ogromnym zaangażowaniem i pasją do tematu. Jego zdolność do przekazywania skomplikowanych koncepcji w zrozumiały sposób była ceniona przez uczestników.</p>
-        <div class="mt-4">
-          <p class="font-semibold text-gray-900">Grzegorz Wilk</p>
-          <p class="text-gray-600">Prezes zarządu @ Fione</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex-1 text-center lg:text-left space-y-8" data-aos="fade-up">
+          <div class="inline-block">
+            <span class="bg-primary/10 text-primary rounded-full py-2 px-4 text-sm font-medium">
+              <%= t('home.hero.subtitle') %>
+            </span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              <%= t('home.hero.title') %>
+            </span>
+          </h1>
+          
+          <p class="text-xl text-gray-400 max-w-2xl">
+            Building intelligent solutions for tomorrow's challenges.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a href="#work" class="group px-8 py-4 bg-primary text-white rounded-xl font-medium inline-flex items-center transition-all hover:bg-primary-dark">
+              View My Work
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="#contact" class="group px-8 py-4 border border-gray-700 text-white rounded-xl font-medium inline-flex items-center hover:bg-white/5 transition-all">
+              Get in Touch
+            </a>
+          </div>
         </div>
-      </div>
-
-      <!-- Testimonial 2 -->
-      <div class="bg-white rounded-xl shadow-md p-8">
-        <p class="text-gray-600 mb-4">Szkolenie miało na celu praktyczne wykorzystanie uczenia maszynowego w języku programowania Python. Z pewnością mogę polecić Pana Mateusza Dorobek jako wykładowcę i trenera.</p>
-        <div class="mt-4">
-          <p class="font-semibold text-gray-900">Marcin Moskała</p>
-          <p class="text-gray-600">CEO @ Kt. Academy</p>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="bg-white rounded-xl shadow-md p-8">
-        <p class="text-gray-600 mb-4">Pan Mateusz Dorobek jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej. Zdecydowanie polecam go jako trenera i wykładowcę w tematyce analizy danych i uczenia głębokiego.</p>
-        <div class="mt-4">
-          <p class="font-semibold text-gray-900">Mariusz Kacprzak</p>
-          <p class="text-gray-600">Kierownik @ Sieć Badawcza Łukasiewicz</p>
+        
+        <div class="flex-1 relative" data-aos="fade-left">
+          <div class="relative aspect-square max-w-lg mx-auto">
+            <%= image_tag "hero.png", class: "rounded-3xl object-cover shadow-2xl" %>
+            <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/20 to-transparent"></div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Stats Section -->
-<div class="bg-white py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
-      <div>
-        <p class="text-4xl font-extrabold text-indigo-600">100+</p>
-        <p class="mt-2 text-lg font-medium text-gray-600">zadowolonych klientów</p>
+  <!-- Skills Section -->
+  <div class="py-24 bg-white" id="skills">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-900">
+          Expertise & Skills
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Leveraging cutting-edge technology to solve complex problems
+        </p>
       </div>
-      <div>
-        <p class="text-4xl font-extrabold text-indigo-600">5+</p>
-        <p class="mt-2 text-lg font-medium text-gray-600">lat na rynku</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Machine Learning -->
+        <div class="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all" data-aos="fade-up">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <i class="fas fa-brain text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Machine Learning</h3>
+          <p class="text-gray-600 mb-6">Building intelligent systems that learn and adapt from data</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">TensorFlow</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">PyTorch</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Computer Vision -->
+        <div class="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <i class="fas fa-eye text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Computer Vision</h3>
+          <p class="text-gray-600 mb-6">Processing and analyzing visual data for real-world applications</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">OpenCV</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">YOLO</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">MediaPipe</span>
+          </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <i class="fas fa-chart-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Science</h3>
+          <p class="text-gray-600 mb-6">Extracting insights and value from complex datasets</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Pandas</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">NumPy</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Matplotlib</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <p class="text-4xl font-extrabold text-indigo-600">1000+</p>
-        <p class="mt-2 text-lg font-medium text-gray-600">godzin konsultacji</p>
+    </div>
+  </div>
+
+  <!-- Featured Work -->
+  <div class="py-24 bg-gray-50" id="work">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-900">
+          Featured Projects
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          A selection of my recent work and research
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
+          <div class="aspect-video bg-gray-100 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Neural Network Research</h3>
+            <p class="text-gray-600 mb-6">Advanced research in neural network architectures and optimization techniques</p>
+            <div class="flex items-center text-primary font-medium">
+              Learn More
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="aspect-video bg-gray-100 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Computer Vision System</h3>
+            <p class="text-gray-600 mb-6">Real-time object detection and tracking system for industrial applications</p>
+            <div class="flex items-center text-primary font-medium">
+              Learn More
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="py-24 bg-white" id="stats">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-900">
+          Consulting Impact
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Years of experience delivering value through AI and data science
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
+          <div class="text-4xl font-bold text-primary mb-2">100+</div>
+          <div class="text-gray-600">Satisfied Clients</div>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl font-bold text-primary mb-2">10+</div>
+          <div class="text-gray-600">Years in Industry</div>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl font-bold text-primary mb-2">1000+</div>
+          <div class="text-gray-600">Consulting Hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="py-24 bg-gray-50" id="testimonials">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-900">
+          Client Testimonials
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          What industry leaders say about our collaboration
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="ml-4">
+              <div class="font-semibold text-gray-900">Grzegorz Wilk</div>
+              <div class="text-sm text-gray-600">CEO @ Fione</div>
+            </div>
+          </div>
+          <p class="text-gray-600">"Pan Mateusz wykazał się nie tylko pełnym profesjonalizmem, ale również ogromnym zaangażowaniem i pasją do tematu. Jego zdolność do przekazywania skomplikowanych koncepcji w zrozumiały sposób była ceniona przez uczestników."</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-6">
+            <div class="ml-4">
+              <div class="font-semibold text-gray-900">Marcin Moskała</div>
+              <div class="text-sm text-gray-600">CEO @ Kt. Academy</div>
+            </div>
+          </div>
+          <p class="text-gray-600">"Szkolenie miało na celu praktyczne wykorzystanie uczenia maszynowego w języku programowania Python. Z pewnością mogę polecić Pana Mateusza Dorobek jako wykładowcę i trenera."</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-6">
+            <div class="ml-4">
+              <div class="font-semibold text-gray-900">Mariusz Kacprzak</div>
+              <div class="text-sm text-gray-600">Manager @ Sieć Badawcza Łukasiewicz</div>
+            </div>
+          </div>
+          <p class="text-gray-600">"Jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej. Zdecydowanie polecam go jako trenera i wykładowcę w tematyce analizy danych i uczenia głębokiego."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Events Section -->
+  <div class="py-24 bg-white" id="events">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-900">
+          Recent Events
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Speaking engagements and conferences
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Event 1 -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
+          <div class="p-8">
+            <div class="text-sm text-primary mb-4">12 September 2023</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Driven Innovation</h3>
+            <p class="text-gray-600 mb-6">Dialog między zespołem biznesem a zespołem Machine Learning. Uruchomienie w Allegro własnej usługi płatności odroczonych (Allegro Pay)...</p>
+            <a href="#" class="inline-flex items-center text-primary">
+              Read More
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-8">
+            <div class="text-sm text-primary mb-4">12 September 2023</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Science Summit</h3>
+            <p class="text-gray-600 mb-6">Jak Allegro Pay prognozuje w oparciu o ograniczone dane historyczne. Podczas mojego wystąpienia dowiesz się jak w Allegro Pay rozwiązujemy problem ryzyka kredytowego...</p>
+            <a href="#" class="inline-flex items-center text-primary">
+              Read More
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-8">
+            <div class="text-sm text-primary mb-4">25 March 2019</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">PyWaw 2019</h3>
+            <p class="text-gray-600 mb-6">Generowanie muzyki z użyciem sieci neuronowych. Wszechobecna sztuczna inteligencja dotyka niemalże każdej dziedziny naszego życia...</p>
+            <a href="#" class="inline-flex items-center text-primary">
+              Read More
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="py-24 bg-gray-50" id="contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-gray-900">
+            Get in Touch
+          </h2>
+          <p class="text-xl text-gray-600">
+            Let's discuss how we can work together
+          </p>
+        </div>
+
+        <%= form_with(url: '/contact', class: "space-y-6", local: true) do |f| %>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <%= f.label :name, t('home.contact.form.name'), class: "block text-sm font-medium text-gray-700 mb-2" %>
+              <%= f.text_field :name, class: "w-full px-4 py-3 rounded-xl border-gray-300 focus:border-primary focus:ring-primary" %>
+            </div>
+
+            <div>
+              <%= f.label :email, t('home.contact.form.email'), class: "block text-sm font-medium text-gray-700 mb-2" %>
+              <%= f.email_field :email, class: "w-full px-4 py-3 rounded-xl border-gray-300 focus:border-primary focus:ring-primary" %>
+            </div>
+          </div>
+
+          <div>
+            <%= f.label :message, t('home.contact.form.message'), class: "block text-sm font-medium text-gray-700 mb-2" %>
+            <%= f.text_area :message, rows: 6, class: "w-full px-4 py-3 rounded-xl border-gray-300 focus:border-primary focus:ring-primary" %>
+          </div>
+
+          <div class="text-center">
+            <%= f.submit t('home.contact.form.submit'), class: "inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary-dark transition-all" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

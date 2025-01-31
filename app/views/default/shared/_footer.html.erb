@@ -1,0 +1,80 @@
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Mateusz Dorobek</h3>
+        <p class="text-sm">
+          <%= t('home.hero.subtitle') %>
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4"><%= t('footer.quick_links') %></h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#services" class="text-sm hover:text-white transition-colors">
+              <%= t('home.hero.cta.offer') %>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="text-sm hover:text-white transition-colors">
+              <%= t('home.hero.cta.contact') %>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-sm hover:text-white transition-colors">
+              <%= t('home.blog.title') %>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4"><%= t('home.services.title') %></h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-sm hover:text-white transition-colors">
+              <%= t('home.services.workshops.title') %>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-sm hover:text-white transition-colors">
+              <%= t('home.services.projects.title') %>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-sm hover:text-white transition-colors">
+              <%= t('home.services.consulting.title') %>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4"><%= t('footer.social') %></h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+      <p class="text-sm">
+        &copy; <%= Time.current.year %> Mateusz Dorobek. <%= t('footer.copyright') %>
+      </p>
+    </div>
+  </div>
+</footer>

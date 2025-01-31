@@ -8,7 +8,7 @@ Mobility.configure do
     query
     cache
     presence
-    fallbacks true # default to false, enable if passed fallbacks: true
+    fallbacks false # default to false, enable if passed fallbacks: true
     locale_accessors
     default
   end
