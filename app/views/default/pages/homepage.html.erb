@@ -160,8 +160,12 @@
   </div>
 
   <!-- Statistics Section -->
-  <div class="py-24 bg-white" id="stats">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative py-24 bg-white overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
           <%= t('home.stats.title') %>
@@ -171,26 +175,33 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
-          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.clients.count') %></div>
-          <div class="text-gray-600"><%= t('home.stats.clients.label') %></div>
-        </div>
-        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.years.count') %></div>
-          <div class="text-gray-600"><%= t('home.stats.years.label') %></div>
-        </div>
-        <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.hours.count') %></div>
-          <div class="text-gray-600"><%= t('home.stats.hours.label') %></div>
-        </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <% ['clients', 'years', 'hours', 'projects'].each do |stat| %>
+          <div class="text-center space-y-2 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
+            <div class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark">
+              <%= t("home.stats.#{stat}.count") %>
+            </div>
+            <div class="text-gray-600 font-medium">
+              <%= t("home.stats.#{stat}.label") %>
+            </div>
+          </div>
+        <% end %>
       </div>
+
+      <!-- Floating Elements -->
+      <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float"></div>
+      <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay"></div>
     </div>
   </div>
 
   <!-- Testimonials Section -->
-  <div class="py-24 bg-gray-50" id="testimonials">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative py-24 bg-gray-50 overflow-hidden" id="testimonials">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0  opacity-50"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
           <%= t('home.testimonials.title') %>
@@ -200,46 +211,49 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="ml-4">
-              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.grzegorz_wilk.name') %></div>
-              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.grzegorz_wilk.position') %></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <% t('home.testimonials.testimonials').each_with_index do |testimonial, index| %>
+          <div class="card-hover bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+            <!-- Quote Icon -->
+            <div class="mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center icon-hover">
+                <i class="fas fa-quote-right text-xl text-primary"></i>
+              </div>
             </div>
-          </div>
-          <p class="text-gray-600"><%= t('home.testimonials.testimonials.grzegorz_wilk.quote') %></p>
-        </div>
 
-        <!-- Testimonial 2 -->
-        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center mb-6">
-            <div class="ml-4">
-              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.marcin_moskała.name') %></div>
-              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.marcin_moskała.position') %></div>
-            </div>
-          </div>
-          <p class="text-gray-600"><%= t('home.testimonials.testimonials.marcin_moskała.quote') %></p>
-        </div>
+            <!-- Testimonial Content -->
+            <blockquote class="text-gray-600 italic mb-6">
+              "<%= testimonial[:content] %>"
+            </blockquote>
 
-        <!-- Testimonial 3 -->
-        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex items-center mb-6">
-            <div class="ml-4">
-              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.mariusz_kacprzak.name') %></div>
-              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.mariusz_kacprzak.position') %></div>
+            <!-- Author Info -->
+            <div class="flex items-center gap-4 mt-auto">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+                <span class="text-xl font-bold text-white"><%= testimonial[:author].split.map { |n| n[0] }.join %></span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900"><%= testimonial[:author] %></div>
+                <div class="text-sm text-primary"><%= testimonial[:position] %></div>
+              </div>
             </div>
           </div>
-          <p class="text-gray-600"><%= t('home.testimonials.testimonials.mariusz_kacprzak.quote') %></p>
-        </div>
+        <% end %>
       </div>
+
+      <!-- Floating Elements -->
+      <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float"></div>
+      <div class="absolute top-1/4 -left-8 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float-delay"></div>
     </div>
   </div>
 
   <!-- Recent Events Section -->
-  <div class="py-24 bg-white" id="events">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative py-24 bg-white overflow-hidden" id="events">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] opacity-50"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
           <%= t('home.events.title') %>
@@ -250,51 +264,50 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Event 1 -->
-        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
-          <div class="p-8">
-            <div class="text-sm text-primary mb-4"><%= t('home.events.events.data_driven_innovation.date') %></div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.data_driven_innovation.title') %></h3>
-            <p class="text-gray-600 mb-6"><%= t('home.events.events.data_driven_innovation.description') %></p>
-            <a href="#" class="inline-flex items-center text-primary">
-              <%= t('home.events.learn_more') %>
-              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
+        <% t('home.events.events').each_with_index do |event, index| %>
+          <div class="card-hover group bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+            <!-- Event Header -->
+            <div class="relative h-48 bg-gradient-to-br from-primary to-primary-dark p-6 flex flex-col justify-end">
+              <!-- Event Icon -->
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-white/10 backdrop-blur-xl flex items-center justify-center">
+                <i class="fas fa-calendar-alt text-xl text-white"></i>
+              </div>
+              
+              <!-- Event Date & Location -->
+              <div class="text-white">
+                <time class="text-lg font-semibold">
+                  <%= Date.parse(event[:date]).strftime("%B %d, %Y") %>
+                </time>
+                <div class="text-white/80"><%= event[:location] %></div>
+              </div>
+            </div>
 
-        <!-- Event 2 -->
-        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
-          <div class="p-8">
-            <div class="text-sm text-primary mb-4"><%= t('home.events.events.data_science_summit.date') %></div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.data_science_summit.title') %></h3>
-            <p class="text-gray-600 mb-6"><%= t('home.events.events.data_science_summit.description') %></p>
-            <a href="#" class="inline-flex items-center text-primary">
-              <%= t('home.events.learn_more') %>
-              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
+            <!-- Event Content -->
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                <%= event[:title] %>
+              </h3>
+              <p class="text-gray-600">
+                <%= event[:description] %>
+              </p>
+            </div>
 
-        <!-- Event 3 -->
-        <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-          <div class="p-8">
-            <div class="text-sm text-primary mb-4"><%= t('home.events.events.pywaw_2019.date') %></div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.pywaw_2019.title') %></h3>
-            <p class="text-gray-600 mb-6"><%= t('home.events.events.pywaw_2019.description') %></p>
-            <a href="#" class="inline-flex items-center text-primary">
-              <%= t('home.events.learn_more') %>
-              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <!-- Event Footer -->
+            <div class="px-6 pb-6">
+              <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors">
+                Learn more
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
+
+      <!-- Floating Elements -->
+      <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float"></div>
+      <div class="absolute top-1/4 -right-8 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float-delay"></div>
     </div>
   </div>
 

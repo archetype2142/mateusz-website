@@ -3,7 +3,7 @@ en:
     hero:
       title: "AI Consulting & Training"
       subtitle: "Unlock the potential in your data through advanced analytics and artificial intelligence"
-      description: "Building intelligent solutions for tomorrow's challenges"
+      description: "Empowering businesses with cutting-edge AI solutions and expert knowledge transfer. Let's transform your data into actionable insights."
       cta:
         offer: "Services"
         contact: "Contact"
@@ -12,94 +12,120 @@ en:
     
     services:
       title: "Services"
-      subtitle: "Comprehensive AI & Data Science Support"
+      subtitle: "Comprehensive AI & Data Science Solutions"
       workshops:
         title: "AI Training & Workshops"
-        description: "Practical training in artificial intelligence and machine learning, tailored to your needs."
-        topics: ["Deep Learning", "Machine Learning", "Computer Vision", "NLP", "Data Analysis"]
+        description: "Hands-on workshops and intensive training programs in AI, machine learning, and data science. From fundamentals to advanced implementations."
+        topics: ["Deep Learning", "Machine Learning", "Computer Vision", "NLP", "Data Analysis", "MLOps", "AI Strategy"]
       projects:
         title: "Data Science Projects"
-        description: "End-to-end implementation of data analysis and machine learning solutions."
+        description: "End-to-end implementation of data analysis and machine learning solutions. From proof of concept to production-ready systems."
       consulting:
-        title: "Consulting"
-        description: "Expert guidance and advisory in AI implementation and data strategy."
-      details: "Learn More"
+        title: "AI Consulting"
+        description: "Strategic guidance and technical expertise to help you navigate the AI landscape and implement effective solutions."
+      details: "Explore Services"
     
     skills:
-      title: "Expertise & Skills"
-      subtitle: "Leveraging cutting-edge technology to solve complex problems"
+      title: "Tech Stack & Expertise"
+      subtitle: "Mastering Tomorrow's Technologies Today"
       machine_learning:
-        title: "Machine Learning"
-        description: "Building intelligent systems that learn and adapt from data"
-        skills: ["TensorFlow", "PyTorch", "Scikit-learn"]
+        title: "Machine Learning & AI"
+        description: "Building intelligent systems that learn and adapt from data, powered by state-of-the-art algorithms"
+        skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "Hugging Face", "LangChain"]
       computer_vision:
         title: "Computer Vision"
-        description: "Processing and analyzing visual data for real-world applications"
-        skills: ["OpenCV", "YOLO", "MediaPipe"]
+        description: "Transforming visual data into actionable insights using cutting-edge CV technologies"
+        skills: ["OpenCV", "YOLO", "MediaPipe", "TensorRT", "CoreML"]
       data_science:
-        title: "Data Science"
-        description: "Extracting insights and value from complex datasets"
-        skills: ["Pandas", "NumPy", "Matplotlib"]
+        title: "Data Engineering"
+        description: "Building robust data pipelines and analytics infrastructure"
+        skills: ["Apache Spark", "Airflow", "MLflow", "Docker", "Kubernetes"]
     
     work:
       title: "Featured Projects"
-      subtitle: "A selection of my recent work and research"
+      subtitle: "Innovative Solutions in Action"
       projects:
         neural_networks:
-          title: "Neural Network Research"
-          description: "Advanced research in neural network architectures and optimization techniques"
+          title: "AI-Powered Analytics Platform"
+          description: "Enterprise-scale machine learning platform processing millions of data points daily"
+          tech: ["Python", "TensorFlow", "React", "AWS"]
         computer_vision:
-          title: "Computer Vision System"
-          description: "Real-time object detection and tracking system for industrial applications"
-      learn_more: "Learn More"
+          title: "Real-time Object Detection"
+          description: "High-performance computer vision system for manufacturing quality control"
+          tech: ["PyTorch", "CUDA", "C++", "Edge Computing"]
+        nlp_project:
+          title: "Language Understanding System"
+          description: "Advanced NLP system for automated document processing and analysis"
+          tech: ["Transformers", "SpaCy", "FastAPI", "Redis"]
+      learn_more: "View Case Study"
     
     stats:
-      title: "Consulting Impact"
-      subtitle: "Years of experience delivering value through AI and data science"
+      title: "Impact & Scale"
+      subtitle: "Delivering Value Through Innovation"
       clients:
         count: "100+"
         label: "Satisfied Clients"
       years:
         count: "10+"
-        label: "Years in Industry"
+        label: "Years of Innovation"
       hours:
         count: "1000+"
-        label: "Consulting Hours"
+        label: "Training Hours"
+      projects:
+        count: "50+"
+        label: "Successful Projects"
     
     testimonials:
-      title: "Client Testimonials"
-      subtitle: "What clients say about working with me"
+      title: "Success Stories"
+      subtitle: "What Industry Leaders Say"
       testimonials:
         - author: "Grzegorz Wilk"
           position: "CEO @ Fione"
-          content: "Mateusz demonstrated not only full professionalism but also great commitment and passion for the subject."
+          content: "Mateusz's expertise in AI and machine learning transformed our approach to data analytics. His ability to explain complex concepts in simple terms was invaluable for our team."
         - author: "Marcin Moskała"
           position: "CEO @ Kt. Academy"
-          content: "The training focused on practical applications of machine learning in Python programming."
+          content: "The training program exceeded our expectations. The practical, hands-on approach combined with deep theoretical knowledge provided our developers with exactly what they needed."
         - author: "Mariusz Kacprzak"
           position: "Manager @ Łukasiewicz Research Network"
-          content: "Mr. Mateusz Dorobek is a person focused on effectively conveying practical knowledge."
+          content: "Working with Mateusz on our deep learning project was a game-changer. His expertise and methodical approach helped us achieve breakthrough results."
     
     events:
-      title: "Recent Events"
-      subtitle: "Conferences, workshops, and speaking engagements"
+      title: "Knowledge Sharing"
+      subtitle: "Speaking Engagements & Workshops"
+      upcoming:
+        title: "Upcoming Events"
+        description: "Join me at these upcoming events to learn about the latest in AI and machine learning"
+      past:
+        title: "Past Events"
+        description: "Highlights from previous conferences and workshops"
+      events:
+        - title: "Data Driven Innovation"
+          date: "2023-09-12"
+          description: "Bridging the gap between business and ML teams"
+          location: "Virtual"
+        - title: "Data Science Summit"
+          date: "2023-09-12"
+          description: "Predictive Analytics in FinTech"
+          location: "Warsaw, Poland"
+        - title: "PyWaw 2019"
+          date: "2019-03-25"
+          description: "Neural Networks in Music Generation"
+          location: "Warsaw, Poland"
     
     contact:
-      title: "Let's Work Together"
-      subtitle: "Get in touch to discuss your project"
+      title: "Let's Innovate Together"
+      subtitle: "Ready to transform your ideas into reality?"
       form:
         name: "Your Name"
         email: "Your Email"
-        message: "Your Message"
-        submit: "Send Message"
+        message: "Tell me about your project"
+        submit: "Start the Conversation"
     
   blog:
-    title: "Blog"
+    title: "Insights & Articles"
     reading_time:
       one: "%{count} minute"
       other: "%{count} minutes"
   
   footer:
     quick_links: "Quick Links"
-    social: "Connect"
-    copyright: "All rights reserved."
