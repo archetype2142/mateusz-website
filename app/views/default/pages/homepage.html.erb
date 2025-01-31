@@ -6,45 +6,45 @@
     </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
-      <div class="flex flex-col lg:flex-row items-center gap-16">
-        <div class="flex-1 text-center lg:text-left space-y-8" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        <div class="flex-1 text-center lg:text-left space-y-6 sm:space-y-8" data-aos="fade-up">
           <div class="inline-block">
             <span class="bg-primary/10 text-primary rounded-full py-2 px-4 text-sm font-medium">
               <%= t('home.hero.subtitle') %>
             </span>
           </div>
           
-          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+          <h1 class="text-3xl sm:text-4xl lg:text-7xl font-bold text-white leading-tight">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
               <%= t('home.hero.title') %>
             </span>
           </h1>
           
-          <p class="text-xl text-gray-400 max-w-2xl">
+          <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0">
             <%= t('home.hero.description') %>
           </p>
           
           <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-            <a href="#work" class="group px-8 py-4 bg-primary text-white rounded-xl font-medium inline-flex items-center transition-all hover:bg-primary-dark">
+            <a href="#work" class="group w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-xl font-medium inline-flex items-center justify-center transition-all hover:bg-primary-dark">
               <%= t('home.hero.cta.view_work') %>
               <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a href="#contact" class="group px-8 py-4 border border-gray-700 text-white rounded-xl font-medium inline-flex items-center hover:bg-white/5 transition-all">
+            <a href="#contact" class="group w-full sm:w-auto px-8 py-4 border border-gray-700 text-white rounded-xl font-medium inline-flex items-center justify-center hover:bg-white/5 transition-all">
               <%= t('home.hero.cta.get_in_touch') %>
             </a>
           </div>
         </div>
         
-        <div class="flex-1 relative" data-aos="fade-left">
-          <div class="relative aspect-square max-w-lg mx-auto">
-            <%= image_tag "hero.png", class: "rounded-3xl object-cover shadow-2xl" %>
+        <div class="flex-1 relative w-full max-w-lg lg:max-w-none mx-auto" data-aos="fade-left">
+          <div class="relative aspect-square">
+            <%= image_tag "hero.png", class: "rounded-3xl object-cover shadow-2xl w-full h-full" %>
             <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/20 to-transparent"></div>
             
             <!-- Floating Elements -->
-            <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float"></div>
-            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay"></div>
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float sm-hide-animation"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay sm-hide-animation"></div>
           </div>
         </div>
       </div>
@@ -189,8 +189,8 @@
       </div>
 
       <!-- Floating Elements -->
-      <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float"></div>
-      <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay"></div>
+      # <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float"></div>
+      # <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float-delay"></div>
     </div>
   </div>
 
@@ -306,8 +306,8 @@
       </div>
 
       <!-- Floating Elements -->
-      <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float"></div>
-      <div class="absolute top-1/4 -right-8 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float-delay"></div>
+      # <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full backdrop-blur-xl animate-float"></div>
+      # <div class="absolute top-1/4 -right-8 w-24 h-24 bg-primary/20 rounded-xl backdrop-blur-xl animate-float-delay"></div>
     </div>
   </div>
 

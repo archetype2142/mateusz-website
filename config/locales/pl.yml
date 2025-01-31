@@ -1,107 +1,131 @@
 pl:
   home:
     hero:
-      title: "Konsulting i szkolenia AI"
-      subtitle: "Wykorzystaj potencjał drzemiący w Twoich danych przy użyciu zaawansowanej analizy danych oraz sztucznej inteligencji"
-      description: "Budowanie inteligentnych rozwiązań na wyzwania jutra"
+      title: "Konsultacje i Szkolenia AI"
+      subtitle: "Wykorzystaj potencjał swoich danych dzięki zaawansowanej analizie i sztucznej inteligencji"
+      description: "Wzmacniamy firmy poprzez nowoczesne rozwiązania AI i transfer eksperckiej wiedzy. Przekształć swoje dane w praktyczne wnioski."
       cta:
-        offer: "Oferta"
+        offer: "Usługi"
         contact: "Kontakt"
-        view_work: "Zobacz projekty"
+        view_work: "Zobacz Moje Prace"
         get_in_touch: "Skontaktuj się"
     
     services:
       title: "Usługi"
-      subtitle: "Kompleksowe wsparcie w zakresie AI i Data Science"
+      subtitle: "Kompleksowe Rozwiązania z Zakresu AI i Data Science"
       workshops:
         title: "Szkolenia i Warsztaty AI"
-        description: "Praktyczne szkolenia z zakresu sztucznej inteligencji i uczenia maszynowego."
-        topics: ["Deep Learning", "Machine Learning", "Computer Vision", "NLP", "Data Analysis"]
+        description: "Warsztaty praktyczne i intensywne programy szkoleniowe z zakresu AI, uczenia maszynowego i data science. Od podstaw po zaawansowane wdrożenia."
+        topics: ["Uczenie Głębokie", "Uczenie Maszynowe", "Wizja Komputerowa", "NLP", "Analiza Danych", "MLOps", "Strategia AI"]
       projects:
         title: "Projekty Data Science"
-        description: "Kompleksowa realizacja projektów z zakresu analizy danych i machine learning."
+        description: "Kompleksowe wdrożenia analiz danych i rozwiązań uczenia maszynowego. Od koncepcji po systemy gotowe do produkcji."
       consulting:
-        title: "Konsultacje"
-        description: "Indywidualne konsultacje i doradztwo w zakresie AI i analizy danych."
-      details: "Szczegóły"
+        title: "Konsultacje AI"
+        description: "Strategiczne doradztwo i wiedza techniczna, które pomogą Ci poruszać się w świecie AI i wdrażać skuteczne rozwiązania."
+      details: "Poznaj Usługi"
     
     skills:
-      title: "Umiejętności i Specjalizacje"
-      subtitle: "Wykorzystanie najnowszych technologii do rozwiązywania złożonych problemów"
+      title: "Technologie i Ekspertyza"
+      subtitle: "Opanowanie technologii jutra już dziś"
       machine_learning:
-        title: "Machine Learning"
-        description: "Budowanie inteligentnych systemów uczących się na podstawie danych"
-        skills: ["TensorFlow", "PyTorch", "Scikit-learn"]
+        title: "Uczenie Maszynowe i AI"
+        description: "Tworzenie inteligentnych systemów uczących się na podstawie danych, wspieranych nowoczesnymi algorytmami"
+        skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "Hugging Face", "LangChain"]
       computer_vision:
-        title: "Computer Vision"
-        description: "Przetwarzanie i analiza danych wizualnych dla zastosowań praktycznych"
-        skills: ["OpenCV", "YOLO", "MediaPipe"]
+        title: "Wizja Komputerowa"
+        description: "Przekształcanie danych wizualnych w praktyczne wnioski dzięki nowoczesnym technologiom CV"
+        skills: ["OpenCV", "YOLO", "MediaPipe", "TensorRT", "CoreML"]
       data_science:
-        title: "Data Science"
-        description: "Wydobywanie wartości i wiedzy z kompleksowych zbiorów danych"
-        skills: ["Pandas", "NumPy", "Matplotlib"]
+        title: "Inżynieria Danych"
+        description: "Budowanie solidnych pipeline'ów danych i infrastruktury analitycznej"
+        skills: ["Apache Spark", "Airflow", "MLflow", "Docker", "Kubernetes"]
     
     work:
       title: "Wybrane Projekty"
-      subtitle: "Przegląd moich ostatnich prac i badań"
+      subtitle: "Innowacyjne Rozwiązania w Działaniu"
       projects:
         neural_networks:
-          title: "Badania nad Sieciami Neuronowymi"
-          description: "Zaawansowane badania nad architekturami sieci neuronowych i technikami optymalizacji"
+          title: "Platforma Analityczna Zasilana AI"
+          description: "Platforma uczenia maszynowego na poziomie korporacyjnym, przetwarzająca miliony punktów danych dziennie"
+          tech: ["Python", "TensorFlow", "React", "AWS"]
         computer_vision:
-          title: "System Wizji Komputerowej"
-          description: "System detekcji i śledzenia obiektów w czasie rzeczywistym dla zastosowań przemysłowych"
-      learn_more: "Dowiedz się więcej"
+          title: "Wykrywanie Obiektów w Czasie Rzeczywistym"
+          description: "Wydajny system wizji komputerowej do kontroli jakości w produkcji"
+          tech: ["PyTorch", "CUDA", "C++", "Edge Computing"]
+        nlp_project:
+          title: "System Rozumienia Języka"
+          description: "Zaawansowany system NLP do automatycznego przetwarzania i analizy dokumentów"
+          tech: ["Transformers", "SpaCy", "FastAPI", "Redis"]
+      learn_more: "Zobacz Studium Przypadku"
     
     stats:
-      title: "Wpływ Konsultingu"
-      subtitle: "Lata doświadczenia w dostarczaniu wartości poprzez AI i data science"
+      title: "Wpływ i Skala"
+      subtitle: "Dostarczanie Wartości Dzięki Innowacjom"
       clients:
         count: "100+"
-        label: "Zadowolonych klientów"
+        label: "Zadowolonych Klientów"
       years:
         count: "10+"
-        label: "Lat w branży"
+        label: "Lat Innowacji"
       hours:
         count: "1000+"
-        label: "Godzin konsultacji"
+        label: "Godzin Szkoleniowych"
+      projects:
+        count: "50+"
+        label: "Udanych Projektów"
     
     testimonials:
-      title: "Referencje"
-      subtitle: "Co mówią klienci o współpracy ze mną"
+      title: "Historie Sukcesu"
+      subtitle: "Co Mówią Liderzy Branży"
       testimonials:
         - author: "Grzegorz Wilk"
-          position: "Prezes zarządu @ Fione"
-          content: "Pan Mateusz wykazał się nie tylko pełnym profesjonalizmem, ale również ogromnym zaangażowaniem i pasją do tematu."
+          position: "CEO @ Fione"
+          content: "Ekspertyza Mateusza w zakresie AI i uczenia maszynowego zmieniła nasze podejście do analizy danych. Jego zdolność do wyjaśniania złożonych pojęć w prosty sposób była bezcenna dla naszego zespołu."
         - author: "Marcin Moskała"
           position: "CEO @ Kt. Academy"
-          content: "Szkolenie miało na celu praktyczne wykorzystanie uczenia maszynowego w języku programowania Python."
+          content: "Program szkoleniowy przerósł nasze oczekiwania. Praktyczne podejście w połączeniu z głęboką wiedzą teoretyczną dostarczyło naszym deweloperom tego, czego potrzebowali."
         - author: "Mariusz Kacprzak"
-          position: "Kierownik @ Sieć Badawcza Łukasiewicz"
-          content: "Pan Mateusz Dorobek jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej."
+          position: "Manager @ Sieć Badawcza Łukasiewicz"
+          content: "Współpraca z Mateuszem przy projekcie deep learning była przełomowa. Jego wiedza i metodyczne podejście pomogły nam osiągnąć przełomowe rezultaty."
     
     events:
-      title: "Ostatnie Wydarzenia"
-      subtitle: "Konferencje, warsztaty i wystąpienia"
+      title: "Dzielenie się Wiedzą"
+      subtitle: "Wystąpienia i Warsztaty"
+      upcoming:
+        title: "Nadchodzące Wydarzenia"
+        description: "Dołącz do mnie na nadchodzących wydarzeniach, aby dowiedzieć się o najnowszych osiągnięciach w AI i uczeniu maszynowym"
+      past:
+        title: "Poprzednie Wydarzenia"
+        description: "Najciekawsze momenty z poprzednich konferencji i warsztatów"
+      events:
+        - title: "Innowacje oparte na Danych"
+          date: "2023-09-12"
+          description: "Łączenie biznesu z zespołami ML"
+          location: "Wirtualne"
+        - title: "Data Science Summit"
+          date: "2023-09-12"
+          description: "Analiza Predykcyjna w FinTech"
+          location: "Warszawa, Polska"
+        - title: "PyWaw 2019"
+          date: "2019-03-25"
+          description: "Sieci Neuronowe w Generowaniu Muzyki"
+          location: "Warszawa, Polska"
     
     contact:
-      title: "Rozpocznijmy Współpracę"
-      subtitle: "Skontaktuj się, aby omówić Twój projekt"
+      title: "Stwórzmy Razem Innowacje"
+      subtitle: "Gotowy, aby przekształcić swoje pomysły w rzeczywistość?"
       form:
         name: "Twoje Imię"
         email: "Twój Email"
-        message: "Twoja Wiadomość"
-        submit: "Wyślij Wiadomość"
+        message: "Opowiedz mi o swoim projekcie"
+        submit: "Rozpocznij Rozmowę"
     
   blog:
-    title: "Blog"
+    title: "Wpisy i Artykuły"
     reading_time:
       one: "%{count} minuta"
-      few: "%{count} minuty"
-      many: "%{count} minut"
       other: "%{count} minut"
   
   footer:
     quick_links: "Szybkie Linki"
-    social: "Social Media"
-    copyright: "Wszelkie prawa zastrzeżone."
