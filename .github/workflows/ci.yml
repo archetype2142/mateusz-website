@@ -100,7 +100,7 @@ jobs:
           path: ${{ github.workspace }}/tmp/screenshots
           if-no-files-found: ignore
   docker:
-    needs: [scan_ruby, scan_js]
+    needs: [scan_js]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:

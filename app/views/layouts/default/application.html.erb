@@ -2,11 +2,30 @@
 <html>
   <head>
     <title><%= current_spina_account.name %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
-  <body>
-    <%= render 'default/shared/navigation' %>
-    
-    <%= yield %>
+
+  <body class="min-h-screen bg-gray-50">
+    <div class="relative">
+      <%= render 'default/shared/languages' %>
+      <%= render 'default/shared/navigation' %>
+      
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

@@ -39,3 +39,5 @@
 
 # Ignore auto-generated Spina Tailwind CSS configuration
 /app/assets/config/spina/tailwind.config.js
+.DS_Store
+app/.DS_Store

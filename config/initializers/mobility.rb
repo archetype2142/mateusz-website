@@ -1,6 +1,6 @@
 Mobility.configure do
   plugins do
-    backend :key_value
+    backend :table
     active_record
     reader
     writer
@@ -8,7 +8,7 @@ Mobility.configure do
     query
     cache
     presence
-    fallbacks true
+    fallbacks true # default to false, enable if passed fallbacks: true
     locale_accessors
     default
   end

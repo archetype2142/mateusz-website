@@ -1,2 +1,124 @@
-<h1><%= current_page.title %></h1>
-<%= content.html :text %>
+<!-- Hero Section -->
+<div class="bg-gradient-to-r from-blue-600 to-indigo-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+        Konsulting i szkolenia AI
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+        Wykorzystaj potencjał drzemiący w Twoich danych przy użyciu zaawansowanej analizy danych oraz sztucznej inteligencji
+      </p>
+      <div class="mt-10 flex justify-center gap-4">
+        <a href="#services" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-blue-50 transition-colors">
+          Oferta →
+        </a>
+        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors">
+          Kontakt →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<div id="services" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Usługi</h2>
+      <p class="mt-4 text-xl text-gray-600">Kompleksowe wsparcie w zakresie AI i Data Science</p>
+    </div>
+
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
+      <!-- Service 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="px-6 py-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Szkolenia i Warsztaty AI</h3>
+          <p class="text-gray-600 mb-6">Praktyczne szkolenia z zakresu sztucznej inteligencji i uczenia maszynowego.</p>
+          <a href="/szkolenie-warsztaty-ai" class="text-blue-600 hover:text-blue-800 font-medium">
+            Szczegóły →
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="px-6 py-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Projekty Data Science</h3>
+          <p class="text-gray-600 mb-6">Kompleksowa realizacja projektów z zakresu analizy danych i machine learning.</p>
+          <a href="/projekt-data-science" class="text-blue-600 hover:text-blue-800 font-medium">
+            Szczegóły →
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="px-6 py-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Konsultacje</h3>
+          <p class="text-gray-600 mb-6">Indywidualne konsultacje i doradztwo w zakresie AI i analizy danych.</p>
+          <a href="/konsultacje" class="text-blue-600 hover:text-blue-800 font-medium">
+            Szczegóły →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="bg-gray-50 py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-16">Referencje</h2>
+    </div>
+    
+    <div class="grid gap-8 lg:grid-cols-3">
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <p class="text-gray-600 mb-4">Pan Mateusz wykazał się nie tylko pełnym profesjonalizmem, ale również ogromnym zaangażowaniem i pasją do tematu. Jego zdolność do przekazywania skomplikowanych koncepcji w zrozumiały sposób była ceniona przez uczestników.</p>
+        <div class="mt-4">
+          <p class="font-semibold text-gray-900">Grzegorz Wilk</p>
+          <p class="text-gray-600">Prezes zarządu @ Fione</p>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <p class="text-gray-600 mb-4">Szkolenie miało na celu praktyczne wykorzystanie uczenia maszynowego w języku programowania Python. Z pewnością mogę polecić Pana Mateusza Dorobek jako wykładowcę i trenera.</p>
+        <div class="mt-4">
+          <p class="font-semibold text-gray-900">Marcin Moskała</p>
+          <p class="text-gray-600">CEO @ Kt. Academy</p>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <p class="text-gray-600 mb-4">Pan Mateusz Dorobek jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej. Zdecydowanie polecam go jako trenera i wykładowcę w tematyce analizy danych i uczenia głębokiego.</p>
+        <div class="mt-4">
+          <p class="font-semibold text-gray-900">Mariusz Kacprzak</p>
+          <p class="text-gray-600">Kierownik @ Sieć Badawcza Łukasiewicz</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Section -->
+<div class="bg-white py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
+      <div>
+        <p class="text-4xl font-extrabold text-indigo-600">100+</p>
+        <p class="mt-2 text-lg font-medium text-gray-600">zadowolonych klientów</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-indigo-600">5+</p>
+        <p class="mt-2 text-lg font-medium text-gray-600">lat na rynku</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-indigo-600">1000+</p>
+        <p class="mt-2 text-lg font-medium text-gray-600">godzin konsultacji</p>
+      </div>
+    </div>
+  </div>
+</div>
