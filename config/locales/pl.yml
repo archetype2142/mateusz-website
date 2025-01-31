@@ -3,9 +3,13 @@ pl:
     hero:
       title: "Konsulting i szkolenia AI"
       subtitle: "Wykorzystaj potencjał drzemiący w Twoich danych przy użyciu zaawansowanej analizy danych oraz sztucznej inteligencji"
+      description: "Budowanie inteligentnych rozwiązań na wyzwania jutra"
       cta:
         offer: "Oferta"
         contact: "Kontakt"
+        view_work: "Zobacz projekty"
+        get_in_touch: "Skontaktuj się"
+    
     services:
       title: "Usługi"
       subtitle: "Kompleksowe wsparcie w zakresie AI i Data Science"
@@ -20,19 +24,51 @@ pl:
         title: "Konsultacje"
         description: "Indywidualne konsultacje i doradztwo w zakresie AI i analizy danych."
       details: "Szczegóły"
-    expertise:
-      title: "Specjalizacje"
-      items:
-        - title: "Deep Learning"
-          description: "Zaawansowane sieci neuronowe i uczenie głębokie"
-        - title: "Computer Vision"
-          description: "Analiza i przetwarzanie obrazów"
-        - title: "NLP"
-          description: "Przetwarzanie języka naturalnego"
-        - title: "Data Analysis"
-          description: "Analiza danych i wizualizacja"
+    
+    skills:
+      title: "Umiejętności i Specjalizacje"
+      subtitle: "Wykorzystanie najnowszych technologii do rozwiązywania złożonych problemów"
+      machine_learning:
+        title: "Machine Learning"
+        description: "Budowanie inteligentnych systemów uczących się na podstawie danych"
+        skills: ["TensorFlow", "PyTorch", "Scikit-learn"]
+      computer_vision:
+        title: "Computer Vision"
+        description: "Przetwarzanie i analiza danych wizualnych dla zastosowań praktycznych"
+        skills: ["OpenCV", "YOLO", "MediaPipe"]
+      data_science:
+        title: "Data Science"
+        description: "Wydobywanie wartości i wiedzy z kompleksowych zbiorów danych"
+        skills: ["Pandas", "NumPy", "Matplotlib"]
+    
+    work:
+      title: "Wybrane Projekty"
+      subtitle: "Przegląd moich ostatnich prac i badań"
+      projects:
+        neural_networks:
+          title: "Badania nad Sieciami Neuronowymi"
+          description: "Zaawansowane badania nad architekturami sieci neuronowych i technikami optymalizacji"
+        computer_vision:
+          title: "System Wizji Komputerowej"
+          description: "System detekcji i śledzenia obiektów w czasie rzeczywistym dla zastosowań przemysłowych"
+      learn_more: "Dowiedz się więcej"
+    
+    stats:
+      title: "Wpływ Konsultingu"
+      subtitle: "Lata doświadczenia w dostarczaniu wartości poprzez AI i data science"
+      clients:
+        count: "100+"
+        label: "Zadowolonych klientów"
+      years:
+        count: "10+"
+        label: "Lat w branży"
+      hours:
+        count: "1000+"
+        label: "Godzin konsultacji"
+    
     testimonials:
       title: "Referencje"
+      subtitle: "Co mówią klienci o współpracy ze mną"
       testimonials:
         - author: "Grzegorz Wilk"
           position: "Prezes zarządu @ Fione"
@@ -43,42 +79,29 @@ pl:
         - author: "Mariusz Kacprzak"
           position: "Kierownik @ Sieć Badawcza Łukasiewicz"
           content: "Pan Mateusz Dorobek jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej."
-    stats:
-      clients: "zadowolonych klientów"
-      years: "lat na rynku"
-      hours: "godzin konsultacji"
-      projects: "ukończonych projektów"
-    blog:
-      title: "Blog"
-      subtitle: "Najnowsze artykuły"
-      read_more: "Czytaj więcej"
-    faq:
-      title: "Często zadawane pytania"
-      items:
-        - question: "Jakie są wymagania wstępne do szkoleń?"
-          answer: "Podstawowa znajomość programowania w Python jest zalecana."
-        - question: "Czy szkolenia odbywają się online czy stacjonarnie?"
-          answer: "Oferujemy oba formaty szkoleń, dostosowane do potrzeb klienta."
-        - question: "Jak długo trwają typowe szkolenia?"
-          answer: "Szkolenia trwają od 1 do 5 dni, w zależności od zakresu materiału."
+    
+    events:
+      title: "Ostatnie Wydarzenia"
+      subtitle: "Konferencje, warsztaty i wystąpienia"
+    
     contact:
-      title: "Skontaktuj się z nami"
-      cta: "Wyślij wiadomość"
+      title: "Rozpocznijmy Współpracę"
+      subtitle: "Skontaktuj się, aby omówić Twój projekt"
       form:
-        name: "Imię i nazwisko"
-        email: "Email"
-        message: "Wiadomość"
-        submit: "Wyślij"
-    newsletter:
-      title: "Newsletter"
-      subtitle: "Zapisz się, aby otrzymywać najnowsze informacje o AI i Data Science"
-      placeholder: "Twój adres email"
-      button: "Zapisz się"
-    footer:
-      about:
-        title: "O mnie"
-        content: "Ekspert w dziedzinie AI i Data Science z ponad 5-letnim doświadczeniem w prowadzeniu szkoleń i konsultacji."
-      quick_links: "Szybkie linki"
-      social: "Social Media"
-      copyright: "Wszelkie prawa zastrzeżone"
-      
+        name: "Twoje Imię"
+        email: "Twój Email"
+        message: "Twoja Wiadomość"
+        submit: "Wyślij Wiadomość"
+    
+  blog:
+    title: "Blog"
+    reading_time:
+      one: "%{count} minuta"
+      few: "%{count} minuty"
+      many: "%{count} minut"
+      other: "%{count} minut"
+  
+  footer:
+    quick_links: "Szybkie Linki"
+    social: "Social Media"
+    copyright: "Wszelkie prawa zastrzeżone."

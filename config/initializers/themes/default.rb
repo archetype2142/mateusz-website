@@ -6,7 +6,7 @@
 Spina::Theme.register do |theme|
   # All views are namespaced based on the theme's name
   theme.name = "default"
-  theme.title = "Demo theme"
+  theme.title = "Ritwick's theme :)"
 
   # Parts
   # Define all editable parts you want to use in your view templates
@@ -38,7 +38,7 @@ Spina::Theme.register do |theme|
   theme.view_templates = [
     { name: "homepage", title: "Homepage", parts: %w[headline body image_collection] },
     { name: "show", title: "Default", parts: %w[body image repeater] },
-    { name: "demo", title: "Demo", parts: %w[body image_collection image repeater], exclude_from: %w[articles] }
+    { name: "blog", title: "Blog", parts: %w[body image_collection image] }
   ]
 
   # Custom pages
@@ -46,7 +46,8 @@ Spina::Theme.register do |theme|
   # By naming them you can reference them in your code.
   theme.custom_pages = [
     { name: "homepage", title: "Homepage", deletable: false, view_template: "homepage" },
-    { name: "demo", title: "Demo", deletable: true, view_template: "demo" }
+    { name: "demo", title: "Demo", deletable: true, view_template: "demo" },
+    { name: "blog", title: "Blog", deletable: false, view_template: "blog" }
   ]
 
   # Navigations (optional)
@@ -65,7 +66,7 @@ Spina::Theme.register do |theme|
   # Think of resources as a collection of pages. They are managed separately in Spina
   # allowing you to separate these pages from the 'main' collection of pages.
   theme.resources = [
-    { name: "articles", label: "Articles", view_template: "article", slug: "articles" }
+    { name: "blogposts", label: "Blogs", view_template: "blog", slug: "blogs" }
   ]
 
   # Plugins (optional)

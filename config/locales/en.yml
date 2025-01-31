@@ -3,9 +3,12 @@ en:
     hero:
       title: "AI Consulting & Training"
       subtitle: "Unlock the potential in your data through advanced analytics and artificial intelligence"
+      description: "Building intelligent solutions for tomorrow's challenges"
       cta:
         offer: "Services"
         contact: "Contact"
+        view_work: "View My Work"
+        get_in_touch: "Get in Touch"
     
     services:
       title: "Services"
@@ -22,106 +25,81 @@ en:
         description: "Expert guidance and advisory in AI implementation and data strategy."
       details: "Learn More"
     
-    expertise:
-      title: "Areas of Expertise"
-      items:
-        - title: "Deep Learning"
-          description: "Neural networks, computer vision, and advanced AI models"
-          icon: "brain"
-        - title: "Machine Learning"
-          description: "Predictive analytics and pattern recognition"
-          icon: "robot"
-        - title: "Data Science"
-          description: "Data analysis, visualization, and statistical modeling"
-          icon: "chart-line"
-        - title: "AI Strategy"
-          description: "AI implementation and digital transformation consulting"
-          icon: "lightbulb"
+    skills:
+      title: "Expertise & Skills"
+      subtitle: "Leveraging cutting-edge technology to solve complex problems"
+      machine_learning:
+        title: "Machine Learning"
+        description: "Building intelligent systems that learn and adapt from data"
+        skills: ["TensorFlow", "PyTorch", "Scikit-learn"]
+      computer_vision:
+        title: "Computer Vision"
+        description: "Processing and analyzing visual data for real-world applications"
+        skills: ["OpenCV", "YOLO", "MediaPipe"]
+      data_science:
+        title: "Data Science"
+        description: "Extracting insights and value from complex datasets"
+        skills: ["Pandas", "NumPy", "Matplotlib"]
+    
+    work:
+      title: "Featured Projects"
+      subtitle: "A selection of my recent work and research"
+      projects:
+        neural_networks:
+          title: "Neural Network Research"
+          description: "Advanced research in neural network architectures and optimization techniques"
+        computer_vision:
+          title: "Computer Vision System"
+          description: "Real-time object detection and tracking system for industrial applications"
+      learn_more: "Learn More"
     
     stats:
-      title: "Impact in Numbers"
-      clients: "Satisfied Clients"
-      years: "Years of Experience"
-      hours: "Training Hours"
-      projects: "Completed Projects"
+      title: "Consulting Impact"
+      subtitle: "Years of experience delivering value through AI and data science"
+      clients:
+        count: "100+"
+        label: "Satisfied Clients"
+      years:
+        count: "10+"
+        label: "Years in Industry"
+      hours:
+        count: "1000+"
+        label: "Consulting Hours"
     
     testimonials:
       title: "Client Testimonials"
+      subtitle: "What clients say about working with me"
       testimonials:
         - author: "Grzegorz Wilk"
           position: "CEO @ Fione"
-          content: "Mr. Mateusz demonstrated not only complete professionalism but also tremendous commitment and passion for the subject."
+          content: "Mateusz demonstrated not only full professionalism but also great commitment and passion for the subject."
         - author: "Marcin Moskała"
           position: "CEO @ Kt. Academy"
           content: "The training focused on practical applications of machine learning in Python programming."
         - author: "Mariusz Kacprzak"
-          position: "Director @ Łukasiewicz Research Network"
-          content: "Mr. Mateusz Dorobek is dedicated and focused on effectively delivering practical knowledge."
+          position: "Manager @ Łukasiewicz Research Network"
+          content: "Mr. Mateusz Dorobek is a person focused on effectively conveying practical knowledge."
     
-    tech_stack:
-      title: "Technology Stack"
-      items:
-        - name: "Python"
-          icon: "python"
-        - name: "TensorFlow"
-          icon: "brain"
-        - name: "PyTorch"
-          icon: "fire"
-        - name: "Scikit-learn"
-          icon: "chart-line"
-        - name: "Big Data"
-          icon: "database"
+    events:
+      title: "Recent Events"
+      subtitle: "Conferences, workshops, and speaking engagements"
     
     contact:
       title: "Let's Work Together"
-      subtitle: "Ready to transform your business with AI?"
-      cta: "Get in Touch"
+      subtitle: "Get in touch to discuss your project"
       form:
-        name: "Full Name"
-        email: "Email Address"
+        name: "Your Name"
+        email: "Your Email"
         message: "Your Message"
         submit: "Send Message"
     
-    metrics:
-      title: "Performance Metrics"
-      subtitle: "Track record of success in AI implementation"
-      accuracy: "Model Accuracy"
-      efficiency: "Processing Efficiency"
-      scalability: "System Scalability"
-      satisfaction: "Client Satisfaction"
-    
-    charts:
-      expertise: "Expertise Distribution"
-      projects: "Project Success Rate"
-      technologies: "Technology Stack"
-      timeline: "Project Timeline"
-    
-    blog:
-      title: "Blog"
-      subtitle: "Latest Articles"
-      read_more: "Read More"
-    
-    faq:
-      title: "Frequently Asked Questions"
-      items:
-        - question: "What are the prerequisites for training?"
-          answer: "Basic knowledge of Python programming is recommended."
-        - question: "Are trainings conducted online or in-person?"
-          answer: "We offer both formats, tailored to client needs."
-        - question: "How long do typical trainings last?"
-          answer: "Trainings last from 1 to 5 days, depending on the scope of material."
-    
-    newsletter:
-      title: "Newsletter"
-      subtitle: "Subscribe to receive the latest updates in AI and Data Science"
-      placeholder: "Your email address"
-      button: "Subscribe"
-    
+  blog:
+    title: "Blog"
+    reading_time:
+      one: "%{count} minute"
+      other: "%{count} minutes"
+  
   footer:
-    about:
-      title: "About Us"
-      content: "Leading AI consulting and training services to help businesses leverage the power of artificial intelligence."
     quick_links: "Quick Links"
-    services: "Services"
     social: "Connect"
-    copyright: "All rights reserved"
+    copyright: "All rights reserved."

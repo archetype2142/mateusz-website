@@ -10,7 +10,7 @@
         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
           <% Spina::Page.all.each do |page| %>
             <% next if page.title == "Homepage" %>
-            <%= link_to page.title, "/#{page.slug}", class: "inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-gray-300 transition-colors" %>
+            <%= link_to page.title, page.materialized_path, class: "inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900 hover:border-gray-300 transition-colors" %>
           <% end %>
         </div>
       </div>
@@ -20,7 +20,18 @@
         <% if Spina.locales.size > 1 %>
           <div class="hidden sm:flex space-x-2">
             <% Spina.locales.each do |locale| %>
-              <%= link_to locale.upcase, url_for(params.permit!.merge(locale: locale)),
+              <% 
+                # Get the path without any locale prefixes
+                path_without_locale = request.path.gsub(/^\/(en|pl)\//, '/').gsub(/^\/(en|pl)$/, '/')
+                
+                # Generate new path based on locale
+                localized_path = if locale == :en
+                  path_without_locale
+                else
+                  path_without_locale == '/' ? "/#{locale}" : "/#{locale}#{path_without_locale}"
+                end
+              %>
+              <%= link_to locale.upcase, localized_path,
                   class: "px-2 py-1 text-sm font-medium rounded-md transition-colors #{locale == I18n.locale ? 'bg-primary text-white' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'}" %>
             <% end %>
           </div>
@@ -50,7 +61,7 @@
       <%= link_to "About", "/about", class: "block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50" %>
       <% Spina::Page.all.each do |page| %>
         <% next if page.title == "Homepage" %>
-        <%= link_to page.title, "/#{page.slug}", class: "block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50" %>
+        <%= link_to page.title, page.materialized_path, class: "block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50" %>
       <% end %>
       
       <!-- Mobile Language Selector -->
@@ -58,7 +69,18 @@
         <div class="px-3 py-2 border-t border-gray-200 mt-3">
           <div class="flex space-x-2">
             <% Spina.locales.each do |locale| %>
-              <%= link_to locale.upcase, url_for(params.permit!.merge(locale: locale)),
+              <% 
+                # Get the path without any locale prefixes
+                path_without_locale = request.path.gsub(/^\/(en|pl)\//, '/').gsub(/^\/(en|pl)$/, '/')
+                
+                # Generate new path based on locale
+                localized_path = if locale == :en
+                  path_without_locale
+                else
+                  path_without_locale == '/' ? "/#{locale}" : "/#{locale}#{path_without_locale}"
+                end
+              %>
+              <%= link_to locale.upcase, localized_path,
                   class: "px-3 py-1 text-sm font-medium rounded-md transition-colors #{locale == I18n.locale ? 'bg-primary text-white' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'}" %>
             <% end %>
           </div>

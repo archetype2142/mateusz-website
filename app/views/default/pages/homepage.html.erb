@@ -21,18 +21,18 @@
           </h1>
           
           <p class="text-xl text-gray-400 max-w-2xl">
-            Building intelligent solutions for tomorrow's challenges.
+            <%= t('home.hero.description') %>
           </p>
           
           <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
             <a href="#work" class="group px-8 py-4 bg-primary text-white rounded-xl font-medium inline-flex items-center transition-all hover:bg-primary-dark">
-              View My Work
+              <%= t('home.hero.cta.view_work') %>
               <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
             <a href="#contact" class="group px-8 py-4 border border-gray-700 text-white rounded-xl font-medium inline-flex items-center hover:bg-white/5 transition-all">
-              Get in Touch
+              <%= t('home.hero.cta.get_in_touch') %>
             </a>
           </div>
         </div>
@@ -56,10 +56,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
-          Expertise & Skills
+          <%= t('home.skills.title') %>
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Leveraging cutting-edge technology to solve complex problems
+          <%= t('home.skills.subtitle') %>
         </p>
       </div>
 
@@ -69,12 +69,12 @@
           <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
             <i class="fas fa-brain text-2xl text-primary"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Machine Learning</h3>
-          <p class="text-gray-600 mb-6">Building intelligent systems that learn and adapt from data</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3"><%= t('home.skills.machine_learning.title') %></h3>
+          <p class="text-gray-600 mb-6"><%= t('home.skills.machine_learning.description') %></p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">TensorFlow</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">PyTorch</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Scikit-learn</span>
+            <% t('home.skills.machine_learning.skills').each do |skill| %>
+              <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary"><%= skill %></span>
+            <% end %>
           </div>
         </div>
 
@@ -83,12 +83,12 @@
           <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
             <i class="fas fa-eye text-2xl text-primary"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Computer Vision</h3>
-          <p class="text-gray-600 mb-6">Processing and analyzing visual data for real-world applications</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3"><%= t('home.skills.computer_vision.title') %></h3>
+          <p class="text-gray-600 mb-6"><%= t('home.skills.computer_vision.description') %></p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">OpenCV</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">YOLO</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">MediaPipe</span>
+            <% t('home.skills.computer_vision.skills').each do |skill| %>
+              <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary"><%= skill %></span>
+            <% end %>
           </div>
         </div>
 
@@ -97,12 +97,12 @@
           <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
             <i class="fas fa-chart-line text-2xl text-primary"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Science</h3>
-          <p class="text-gray-600 mb-6">Extracting insights and value from complex datasets</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3"><%= t('home.skills.data_science.title') %></h3>
+          <p class="text-gray-600 mb-6"><%= t('home.skills.data_science.description') %></p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Pandas</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">NumPy</span>
-            <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">Matplotlib</span>
+            <% t('home.skills.data_science.skills').each do |skill| %>
+              <span class="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary"><%= skill %></span>
+            <% end %>
           </div>
         </div>
       </div>
@@ -114,10 +114,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
-          Featured Projects
+          <%= t('home.work.title') %>
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          A selection of my recent work and research
+          <%= t('home.work.subtitle') %>
         </p>
       </div>
 
@@ -128,10 +128,10 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Neural Network Research</h3>
-            <p class="text-gray-600 mb-6">Advanced research in neural network architectures and optimization techniques</p>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3"><%= t('home.work.projects.neural_networks.title') %></h3>
+            <p class="text-gray-600 mb-6"><%= t('home.work.projects.neural_networks.description') %></p>
             <div class="flex items-center text-primary font-medium">
-              Learn More
+              <%= t('home.work.learn_more') %>
               <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -145,10 +145,10 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Computer Vision System</h3>
-            <p class="text-gray-600 mb-6">Real-time object detection and tracking system for industrial applications</p>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3"><%= t('home.work.projects.computer_vision.title') %></h3>
+            <p class="text-gray-600 mb-6"><%= t('home.work.projects.computer_vision.description') %></p>
             <div class="flex items-center text-primary font-medium">
-              Learn More
+              <%= t('home.work.learn_more') %>
               <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -164,25 +164,25 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
-          Consulting Impact
+          <%= t('home.stats.title') %>
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Years of experience delivering value through AI and data science
+          <%= t('home.stats.subtitle') %>
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
-          <div class="text-4xl font-bold text-primary mb-2">100+</div>
-          <div class="text-gray-600">Satisfied Clients</div>
+          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.clients.count') %></div>
+          <div class="text-gray-600"><%= t('home.stats.clients.label') %></div>
         </div>
         <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-4xl font-bold text-primary mb-2">10+</div>
-          <div class="text-gray-600">Years in Industry</div>
+          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.years.count') %></div>
+          <div class="text-gray-600"><%= t('home.stats.years.label') %></div>
         </div>
         <div class="p-8 bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-4xl font-bold text-primary mb-2">1000+</div>
-          <div class="text-gray-600">Consulting Hours</div>
+          <div class="text-4xl font-bold text-primary mb-2"><%= t('home.stats.hours.count') %></div>
+          <div class="text-gray-600"><%= t('home.stats.hours.label') %></div>
         </div>
       </div>
     </div>
@@ -193,10 +193,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
-          Client Testimonials
+          <%= t('home.testimonials.title') %>
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          What industry leaders say about our collaboration
+          <%= t('home.testimonials.subtitle') %>
         </p>
       </div>
 
@@ -205,33 +205,33 @@
         <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
           <div class="flex items-center mb-6">
             <div class="ml-4">
-              <div class="font-semibold text-gray-900">Grzegorz Wilk</div>
-              <div class="text-sm text-gray-600">CEO @ Fione</div>
+              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.grzegorz_wilk.name') %></div>
+              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.grzegorz_wilk.position') %></div>
             </div>
           </div>
-          <p class="text-gray-600">"Pan Mateusz wykazał się nie tylko pełnym profesjonalizmem, ale również ogromnym zaangażowaniem i pasją do tematu. Jego zdolność do przekazywania skomplikowanych koncepcji w zrozumiały sposób była ceniona przez uczestników."</p>
+          <p class="text-gray-600"><%= t('home.testimonials.testimonials.grzegorz_wilk.quote') %></p>
         </div>
 
         <!-- Testimonial 2 -->
         <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
           <div class="flex items-center mb-6">
             <div class="ml-4">
-              <div class="font-semibold text-gray-900">Marcin Moskała</div>
-              <div class="text-sm text-gray-600">CEO @ Kt. Academy</div>
+              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.marcin_moskała.name') %></div>
+              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.marcin_moskała.position') %></div>
             </div>
           </div>
-          <p class="text-gray-600">"Szkolenie miało na celu praktyczne wykorzystanie uczenia maszynowego w języku programowania Python. Z pewnością mogę polecić Pana Mateusza Dorobek jako wykładowcę i trenera."</p>
+          <p class="text-gray-600"><%= t('home.testimonials.testimonials.marcin_moskała.quote') %></p>
         </div>
 
         <!-- Testimonial 3 -->
         <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
           <div class="flex items-center mb-6">
             <div class="ml-4">
-              <div class="font-semibold text-gray-900">Mariusz Kacprzak</div>
-              <div class="text-sm text-gray-600">Manager @ Sieć Badawcza Łukasiewicz</div>
+              <div class="font-semibold text-gray-900"><%= t('home.testimonials.testimonials.mariusz_kacprzak.name') %></div>
+              <div class="text-sm text-gray-600"><%= t('home.testimonials.testimonials.mariusz_kacprzak.position') %></div>
             </div>
           </div>
-          <p class="text-gray-600">"Jest osobą zaangażowaną i skupioną na efektywnym przekazywaniu wiedzy praktycznej. Zdecydowanie polecam go jako trenera i wykładowcę w tematyce analizy danych i uczenia głębokiego."</p>
+          <p class="text-gray-600"><%= t('home.testimonials.testimonials.mariusz_kacprzak.quote') %></p>
         </div>
       </div>
     </div>
@@ -242,10 +242,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-4 mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900">
-          Recent Events
+          <%= t('home.events.title') %>
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Speaking engagements and conferences
+          <%= t('home.events.subtitle') %>
         </p>
       </div>
 
@@ -253,11 +253,11 @@
         <!-- Event 1 -->
         <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up">
           <div class="p-8">
-            <div class="text-sm text-primary mb-4">12 September 2023</div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Driven Innovation</h3>
-            <p class="text-gray-600 mb-6">Dialog między zespołem biznesem a zespołem Machine Learning. Uruchomienie w Allegro własnej usługi płatności odroczonych (Allegro Pay)...</p>
+            <div class="text-sm text-primary mb-4"><%= t('home.events.events.data_driven_innovation.date') %></div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.data_driven_innovation.title') %></h3>
+            <p class="text-gray-600 mb-6"><%= t('home.events.events.data_driven_innovation.description') %></p>
             <a href="#" class="inline-flex items-center text-primary">
-              Read More
+              <%= t('home.events.learn_more') %>
               <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -268,11 +268,11 @@
         <!-- Event 2 -->
         <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
           <div class="p-8">
-            <div class="text-sm text-primary mb-4">12 September 2023</div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Science Summit</h3>
-            <p class="text-gray-600 mb-6">Jak Allegro Pay prognozuje w oparciu o ograniczone dane historyczne. Podczas mojego wystąpienia dowiesz się jak w Allegro Pay rozwiązujemy problem ryzyka kredytowego...</p>
+            <div class="text-sm text-primary mb-4"><%= t('home.events.events.data_science_summit.date') %></div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.data_science_summit.title') %></h3>
+            <p class="text-gray-600 mb-6"><%= t('home.events.events.data_science_summit.description') %></p>
             <a href="#" class="inline-flex items-center text-primary">
-              Read More
+              <%= t('home.events.learn_more') %>
               <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -283,11 +283,11 @@
         <!-- Event 3 -->
         <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
           <div class="p-8">
-            <div class="text-sm text-primary mb-4">25 March 2019</div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">PyWaw 2019</h3>
-            <p class="text-gray-600 mb-6">Generowanie muzyki z użyciem sieci neuronowych. Wszechobecna sztuczna inteligencja dotyka niemalże każdej dziedziny naszego życia...</p>
+            <div class="text-sm text-primary mb-4"><%= t('home.events.events.pywaw_2019.date') %></div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4"><%= t('home.events.events.pywaw_2019.title') %></h3>
+            <p class="text-gray-600 mb-6"><%= t('home.events.events.pywaw_2019.description') %></p>
             <a href="#" class="inline-flex items-center text-primary">
-              Read More
+              <%= t('home.events.learn_more') %>
               <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -304,10 +304,10 @@
       <div class="max-w-3xl mx-auto">
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
           <h2 class="text-4xl font-bold text-gray-900">
-            Get in Touch
+            <%= t('home.contact.title') %>
           </h2>
           <p class="text-xl text-gray-600">
-            Let's discuss how we can work together
+            <%= t('home.contact.subtitle') %>
           </p>
         </div>
 
