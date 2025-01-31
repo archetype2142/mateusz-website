@@ -32,7 +32,5 @@ module Mateusz
         load override
       end
     end
-
-    config.hosts << "stunning-lionfish-enormously.ngrok-free.app"
   end
 end
