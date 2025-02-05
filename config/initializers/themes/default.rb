@@ -28,7 +28,11 @@ Spina::Theme.register do |theme|
     { name: "image", title: "Image", part_type: "Spina::Parts::Image" },
     { name: "headline", title: "Headline", hint: "Used in the header", part_type: "Spina::Parts::Line" },
     { name: "footer", title: "Footer", part_type: "Spina::Parts::Text" },
-    { name: "date_place", title: "Date and place", part_type: "Spina::Parts::Line" }
+    { name: "date_place", title: "Date and place", part_type: "Spina::Parts::Line" },
+    { name: "name", title: "name", part_type: "Spina::Parts::Line" },
+    { name: "company_position", title: "company_position", part_type: "Spina::Parts::Line" },
+    { name: "featured_projects", title: "Featured Projects", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[headline image body date_place] },
+    { name: "reviews", title: "Reviews", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[body name company_position] }
   ]
 
   # View templates
@@ -36,9 +40,9 @@ Spina::Theme.register do |theme|
   # You define which parts you want to enable for every view template
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
-    { name: "homepage", title: "Homepage", parts: %w[headline body image_collection] },
+    { name: "homepage", title: "Homepage", parts: %w[headline body image_collection featured_projects reviews] },
     { name: "show", title: "Default", parts: %w[body image repeater] },
-    { name: "blog", title: "Blog", parts: %w[body image_collection image] }
+    { name: "blog", title: "Blog", parts: %w[body image_collection image] },
   ]
 
   # Custom pages
