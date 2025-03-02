@@ -1,0 +1,77 @@
+<% content_for(:header) do %>
+  <div class="header-block">
+    <div class="header-content">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-xl md:text-4xl mt-1">Form Submission from <%= @form_submission.name %></h1>
+          <p class="text-gray-500 text-sm mt-1">Submitted on <%= l @form_submission.created_at, format: :long %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <!-- Contact Header -->
+  <div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
+    <div class="flex items-center space-x-4">
+      <div class="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+        <%= heroicon('user', style: :solid, class: 'h-6 w-6 text-blue-600') %>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900"><%= @form_submission.name %></h2>
+        <p class="text-sm text-gray-500"><%= @form_submission.email %></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 border-b border-gray-200 pb-2 mb-3">Contact Information</h3>
+          <dl class="grid grid-cols-1 gap-4">
+            <div class="bg-gray-50 px-4 py-3 rounded-md">
+              <dt class="text-sm font-medium text-gray-500">Email Address</dt>
+              <dd class="mt-1 text-sm text-gray-900"><%= mail_to @form_submission.email, @form_submission.email, class: "text-blue-600 hover:underline" %></dd>
+            </div>
+            
+            <% if @form_submission.phone.present? %>
+              <div class="bg-gray-50 px-4 py-3 rounded-md">
+                <dt class="text-sm font-medium text-gray-500">Phone Number</dt>
+                <dd class="mt-1 text-sm text-gray-900"><%= @form_submission.phone %></dd>
+              </div>
+            <% end %>
+            
+            <div class="bg-gray-50 px-4 py-3 rounded-md">
+              <dt class="text-sm font-medium text-gray-500">Submission Date</dt>
+              <dd class="mt-1 text-sm text-gray-900"><%= l @form_submission.created_at, format: :long %></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-base font-medium text-gray-900 border-b border-gray-200 pb-2 mb-3">Message</h3>
+        <div class="bg-gray-50 rounded-md p-4">
+          <div class="prose prose-sm max-w-none text-gray-900 whitespace-pre-wrap">
+            <%= simple_format @form_submission.message %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Actions -->
+  <div class="bg-gray-50 p-6 border-t border-gray-200 flex justify-between">
+    <div class="text-sm text-gray-500">
+      Reference ID: #<%= @form_submission.id %>
+    </div>
+    <div>
+      <%= link_to spina.admin_form_submissions_path, class: "text-sm text-blue-600 hover:text-blue-800 font-medium" do %>
+        ← Return to all submissions
+      <% end %>
+    </div>
+  </div>
+</div>

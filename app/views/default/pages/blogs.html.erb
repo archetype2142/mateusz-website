@@ -1,0 +1,89 @@
+
+<div class="min-h-screen bg-white" data-controller="blog">
+  <!-- Hero Section -->
+  <div class="relative py-12 bg-gradient-to-br from-gray-900 to-gray-800">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center" data-aos="fade-up">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8">
+          Blog
+        </h1>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mx-auto px-4 py-8 md:py-12">
+	  <div class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+	    <!-- Main Blog Posts Grid -->
+	    <div class="w-full lg:w-3/4">
+	      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	        <% blogposts.each do |post| %>
+	          <article class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+	            <a href="<%= post.materialized_path %>" class="block h-full">
+	              <% if post.content(:image).present? %>
+	                <div class="relative w-full aspect-video overflow-hidden">
+	                  <%= post.content.image_tag :image, {}, { class: "w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"} %>
+
+	                </div>
+	              <% end %>
+	              <div class="flex flex-col h-full p-5 md:p-6">
+	                <h2 class="text-lg md:text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors mb-2">
+	                  <%= post.title %>
+	                </h2>
+	                <div class="flex items-center text-gray-500 text-xs md:text-sm mb-3 md:mb-4">
+	                  <time datetime="<%= post.created_at.strftime('%Y-%m-%d') %>">
+	                    <%= post.created_at.strftime('%B %d, %Y') %>
+	                  </time>
+	                  <span class="mx-2">•</span>
+	                  <span><%= "#{reading_time(post.content(:body))} min read" %></span>
+	                </div>
+	                <% if post.content(:body).present? %>
+	                  <p class="text-gray-700 text-xs md:text-sm line-clamp-3 mb-4">
+	                    <%= strip_tags(post.content(:body)).truncate(160) %>
+	                  </p>
+	                <% end %>
+	                <span class="mt-auto text-blue-600 text-sm font-medium hover:underline">Read more</span>
+	              </div>
+	            </a>
+	          </article>
+	        <% end %>
+	      </div>
+	    </div>
+	    
+	    <!-- Sidebar -->
+	    <aside class="w-full lg:w-1/4">
+	      <div class="lg:sticky lg:top-6 space-y-6">
+	        <!-- Recommended posts widget -->
+	        <div class="bg-white rounded-lg shadow-md p-5 md:p-6">
+	          <h3 class="text-lg md:text-xl font-semibold mb-4 pb-2 border-b border-gray-100">Recommended Posts</h3>
+	          <ul class="space-y-4">
+	            <% recommended_blogposts.each do |post| %>
+	              <li>
+	                <a href="<%= spina.page_path(post) %>" class="block group">
+	                  <h4 class="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+	                    <%= post.title %>
+	                  </h4>
+	                  <p class="text-xs text-gray-500 mt-1">
+	                    <%= post.created_at.strftime('%B %d, %Y') %>
+	                  </p>
+	                </a>
+	              </li>
+	            <% end %>
+	          </ul>
+	        </div>
+	        
+	        <!-- About widget -->
+	        <div class="bg-white rounded-lg shadow-md p-5 md:p-6">
+	          <h3 class="text-lg md:text-xl font-semibold mb-3 pb-2 border-b border-gray-100">About Our Blog</h3>
+	          <p class="text-sm text-gray-600">
+	            Welcome to our blog, where we share news, updates, and interesting insights into our industry.
+	          </p>
+	        </div>
+	      </div>
+	    </aside>
+	  </div>
+	</div>
+</div>

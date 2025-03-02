@@ -9,6 +9,8 @@ module Spina
         render 'default/pages/about'
       when "events"
         render 'default/pages/events'
+      when "blogs"
+        render 'default/pages/blogs'
       else
         super
       end

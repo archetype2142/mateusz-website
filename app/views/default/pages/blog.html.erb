@@ -38,9 +38,9 @@
       <!-- Image Collection -->
       <% if has_content?(:image_collection) %>
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <% images :image_collection.each do |image| %>
+          <% images :image_collection do |image| %>
             <div class="aspect-square rounded-xl overflow-hidden">
-              <%= content.image_tag(:image, { resize_to_fill: [400, 400] }, { class: "w-full h-full object-cover" }) %>
+              <%= content.image_tag(image, { resize_to_fill: [400, 400] }, { class: "w-full h-full object-cover" }) %>
             </div>
           <% end %>
         </div>

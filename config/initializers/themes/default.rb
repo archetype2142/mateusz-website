@@ -21,18 +21,23 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
-    { name: "repeater", title: "Repeater", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[date_place headline line image] },
+    { name: "youtube_iframe", title: "Youtube link", part_type: "Spina::Parts::Line"},
+    { name: "repeater", title: "Events", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[date_place headline body youtube_iframe] },
     { name: "line", title: "Line", part_type: "Spina::Parts::Line" },
     { name: "body", title: "Body", hint: "Your content", part_type: "Spina::Parts::Text" },
     { name: "image_collection", title: "Image collection", part_type: "Spina::Parts::ImageCollection" },
     { name: "image", title: "Image", part_type: "Spina::Parts::Image" },
     { name: "headline", title: "Headline", hint: "Used in the header", part_type: "Spina::Parts::Line" },
+    { name: "subtitle", title: "Subtitle", part_type: "Spina::Parts::Line" },
+    { name: "pill", title: "Pill", hint: "That text on top greeny", part_type: "Spina::Parts::Line" },
     { name: "footer", title: "Footer", part_type: "Spina::Parts::Text" },
     { name: "date_place", title: "Date and place", part_type: "Spina::Parts::Line" },
     { name: "name", title: "name", part_type: "Spina::Parts::Line" },
     { name: "company_position", title: "company_position", part_type: "Spina::Parts::Line" },
-    { name: "featured_projects", title: "Featured Projects", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[headline image body date_place] },
-    { name: "reviews", title: "Reviews", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[body name company_position] }
+    { name: "featured_projects", title: "Featured Projects", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[headline image body date_place link] },
+    { name: "reviews", title: "Reviews", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[body name company_position] },
+    { name: "link", title: "Link", part_type: "Spina::Parts::Line" },
+    { name: "categories", title: "Categories", part_type: "Spina::Parts::Repeater", item_name: "item", parts: %w[name] }
   ]
 
   # View templates
@@ -40,9 +45,9 @@ Spina::Theme.register do |theme|
   # You define which parts you want to enable for every view template
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
-    { name: "homepage", title: "Homepage", parts: %w[headline body image_collection featured_projects reviews] },
+    { name: "homepage", title: "Homepage", parts: %w[headline subtitle pill body image_collection featured_projects reviews] },
     { name: "show", title: "Default", parts: %w[body image repeater] },
-    { name: "blog", title: "Blog", parts: %w[body image_collection image] },
+    { name: "blog", title: "Blog", parts: %w[body image_collection image categories] },
   ]
 
   # Custom pages
@@ -50,7 +55,6 @@ Spina::Theme.register do |theme|
   # By naming them you can reference them in your code.
   theme.custom_pages = [
     { name: "homepage", title: "Homepage", deletable: false, view_template: "homepage" },
-    { name: "demo", title: "Demo", deletable: true, view_template: "demo" },
     { name: "blog", title: "Blog", deletable: false, view_template: "blog" }
   ]
 
